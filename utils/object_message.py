@@ -21,6 +21,7 @@ def get_object_message(message):
         text = 'unprocessed message'
     return text
 
+
 def replace_start(s):
     # Replace the starting part of the number based on specific prefixes.
     # Args:

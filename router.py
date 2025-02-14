@@ -3,7 +3,9 @@ from flask import Flask, request
 from utils.object_message import get_object_message, replace_start
 from enums.values_enum import VALUE_ENUM
 
+
 app = Flask(__name__)
+
 
 @app.route('/', methods=['GET'])
 def welcome():
@@ -12,6 +14,7 @@ def welcome():
     #     str: Welcome message.
     
     return 'Whatsapp Server'
+
 
 @app.route('/webhook', methods=['GET'])
 def validation_token():
@@ -30,6 +33,7 @@ def validation_token():
     except Exception as e:
         return str(e), 403
     
+
 @app.route('/webhook', methods=['POST'])
 def get_messages():
     # Process incoming messages from the webhook.

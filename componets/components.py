@@ -1,6 +1,7 @@
 import json
 from enums.values_enum import VALUE_ENUM
 
+
 def text_message(number, text):
     # Create a text message payload.
     # Args:
@@ -19,6 +20,7 @@ def text_message(number, text):
         }
     })
     return data
+
 
 def button_reply_message(
     number,
@@ -73,6 +75,7 @@ def button_reply_message(
     )
     return data
 
+
 def list_reply_message(
     body,
     sedd,
@@ -126,6 +129,7 @@ def list_reply_message(
     })
     return data
 
+
 def document_message(
     url,
     number,
@@ -154,6 +158,7 @@ def document_message(
     })
     return data
 
+
 def sticker_message(number, sticker_id):
     # Create a sticker message payload.
     # Args:
@@ -172,6 +177,7 @@ def sticker_message(number, sticker_id):
         }
     })
     return data
+
 
 def reply_reaction_message(number, message_id, emoji):
     # Create a reaction message payload.
@@ -194,6 +200,7 @@ def reply_reaction_message(number, message_id, emoji):
     })
     return data
 
+
 def reply_text_message(number, message_id, text):
     # Create a reply text message payload.
     # Args:
@@ -214,6 +221,7 @@ def reply_text_message(number, message_id, text):
         }
     })
     return data
+
 
 def mark_read_message(message_id):
     # Create a payload to mark a message as read.

@@ -1,6 +1,7 @@
 import requests
 from enums.values_enum import VALUE_ENUM
 
+
 def send_message(data):
     # Send a message using the WhatsApp API.
     # Args:

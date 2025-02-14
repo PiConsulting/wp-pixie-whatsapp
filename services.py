@@ -4,10 +4,12 @@ from enums.options_enum import OPTIONS_ENUM
 from utils.send_message import send_message
 from componets import components
 
+
 def send_responses(number, responses):
     # Helper function to send accumulated responses.
     for item in responses:
-        send_message(item)
+        send_message(item) 
+
 
 def create_reply_button_message(number, options, body, footer, sedd, message_id):
     # Helper function to create a reply button message.
@@ -20,6 +22,7 @@ def create_reply_button_message(number, options, body, footer, sedd, message_id)
         message_id
     )
 
+
 def create_list_reply_message(body, sedd, number, footer, options, message_id):
     # Helper function to create a list reply message.
     return components.list_reply_message(
@@ -30,6 +33,7 @@ def create_list_reply_message(body, sedd, number, footer, options, message_id):
         options=options,
         message_id=message_id
     )
+
 
 def chatbot(name, text, number, message_id):
     # Main chatbot function that processes messages and responds
